@@ -8,5 +8,6 @@ target 'FirebaseSample' do
   # Pods for FirebaseSample
 
   pod 'Firebase/Core'
+  pod 'Firebase/Messaging'
 
 end

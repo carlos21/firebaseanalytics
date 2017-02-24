@@ -30,6 +30,7 @@
 		3502A1CD1E5F470D00A7E962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3502A1CF1E5F470E00A7E962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3502A1D51E5F4A7400A7E962 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35A77F3A1E6096A5004E2DD0 /* FirebaseSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseSample.entitlements; sourceTree = "<group>"; };
 		5A6F00AF5E4F471AFD73022B /* libPods-FirebaseSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirebaseSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		734F512EAFAC5C367C948009 /* Pods-FirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSample/Pods-FirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +68,7 @@
 		3502A1BD1E5F470D00A7E962 /* FirebaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				35A77F3A1E6096A5004E2DD0 /* FirebaseSample.entitlements */,
 				3502A1C11E5F470D00A7E962 /* AppDelegate.h */,
 				3502A1C21E5F470D00A7E962 /* AppDelegate.m */,
 				3502A1C41E5F470D00A7E962 /* ViewController.h */,
@@ -142,6 +144,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = RH4PC25J9C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -353,10 +363,12 @@
 			baseConfigurationReference = 063537400F929D4D639F21F2 /* Pods-FirebaseSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseSample/FirebaseSample.entitlements;
 				DEVELOPMENT_TEAM = RH4PC25J9C;
 				INFOPLIST_FILE = FirebaseSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.firebasesample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.firebaseanalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -366,10 +378,12 @@
 			baseConfigurationReference = 734F512EAFAC5C367C948009 /* Pods-FirebaseSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseSample/FirebaseSample.entitlements;
 				DEVELOPMENT_TEAM = RH4PC25J9C;
 				INFOPLIST_FILE = FirebaseSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.firebasesample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.carlosduclos.firebaseanalytics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
